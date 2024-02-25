@@ -33,13 +33,13 @@ class ATriangle
         c = color;
     }
 
-    // Конструктор для генерації рандомних даних
+    // Конструктор для генерацiї рандомних даних
     public ATriangle()
     {
         Random rand = new Random();
-        a = rand.Next(1, 101); // Генеруємо випадкову довжину катета a в діапазоні від 1 до 100
-        b = rand.Next(1, 101); // Генеруємо випадкову довжину катета b в діапазоні від 1 до 100
-        c = rand.Next(1, 256); // Генеруємо випадковий колір від 1 до 255 (256 виключено)
+        a = rand.Next(1, 101); // Генеруємо випадкову довжину катета a в дiапазонi вiд 1 до 100
+        b = rand.Next(1, 101); // Генеруємо випадкову довжину катета b в дiапазонi вiд 1 до 100
+        c = rand.Next(1, 256); // Генеруємо випадковий колiр вiд 1 до 255 (256 виключено)
     }
 
     // Методи
@@ -51,7 +51,7 @@ class ATriangle
     public int CalculatePerimeter()
     {
         double perimeter = a + b + Math.Sqrt(a * a + b * b); // Обчислюємо периметр
-        return (int)Math.Round(perimeter); // Округлюємо до цілого значення
+        return (int)Math.Round(perimeter); // Округлюємо до цiлого значення
     }
 
     public double CalculateArea()
@@ -160,7 +160,7 @@ class Program
         products[1] = new MilkProduct("Молоко", Math.Round(rand.NextDouble() * 100, 2), DateTime.Today.AddDays(rand.Next(1, 365)));
         products[2] = new Product("Книга", Math.Round(rand.NextDouble() * 100, 2));
 
-        Console.WriteLine("Виведення інформації про товари:");
+        Console.WriteLine("Виведення iнформацiї про товари:");
 
         foreach (Product product in products)
         {
@@ -173,7 +173,7 @@ class Program
 
     public static void TestATriangle()
     {
-        ATriangle triangle = new ATriangle(); // Використовуємо конструктор без параметрів для генерації рандомних даних
+        ATriangle triangle = new ATriangle(); // Використовуємо конструктор без параметрiв для генерацiї рандомних даних
 
         Console.WriteLine("\niнформацiя про трикутник:");
         triangle.DisplaySides();
